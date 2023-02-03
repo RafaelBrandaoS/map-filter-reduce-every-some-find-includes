@@ -1,4 +1,4 @@
-/* map() */
+/* ========== map() ========== */
 
 // dobrar valores
 const numbers = [1, 5, 6, 4, 8, 9, 14]
@@ -23,4 +23,16 @@ const celsius = farenheight.map(convercao)
 
 //console.log(celsius)
 
-/* map() */
+/* ========== map() ========== */
+
+
+
+/* ========== filter() ========== */
+
+const array = [4, 2, 5, 27, 14, 4, 3, 5, 2, 10]
+
+const removeRepitidos = array.filter((elem, index, arr) => arr.indexOf(elem) === index)
+
+//console.log(removeRepitidos)
+
+/* ========== filter() ========== */
