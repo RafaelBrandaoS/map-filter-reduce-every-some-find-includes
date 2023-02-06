@@ -36,3 +36,23 @@ const removeRepitidos = array.filter((elem, index, arr) => arr.indexOf(elem) ===
 //console.log(removeRepitidos)
 
 /* ========== filter() ========== */
+
+
+
+/* ========== reduce() ========== */
+
+const foguetes = [
+   { pais: 'Russia', lancamentos: 35 },
+   { pais: 'US', lancamentos: 28 },
+   { pais: 'China', lancamentos: 19 },
+   { pais: 'Europa', lancamentos: 8 },
+   { pais: 'India', lancamentos: 5 },
+   { pais: 'Japão', lancamentos: 4 },
+   { pais: 'Inglaterra', lancamentos: 2 }
+]
+
+const totalDeLancamentos = foguetes.reduce( ( preVal, elem ) => preVal + elem.lancamentos, 0 )
+
+console.log(totalDeLancamentos)
+
+/* ========== reduce() ========== */
