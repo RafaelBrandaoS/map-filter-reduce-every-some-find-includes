@@ -91,7 +91,7 @@ const maiorDeIdade = usuarios.every(p => p.idade >= 18)
 
 function ePrimo( value ) {
    for (let i = 2; i < value; i++) {
-      if (value % i == 0) {
+      if (value % i === 0) {
          return false
       }
    }
@@ -116,6 +116,36 @@ const equipe = [
 
 const temPiloto = equipe.some(pessoa => pessoa.piloto)
 
-console.log(temPiloto)
+//console.log(temPiloto)
 
 /* ========== some() ========== */
+
+
+
+/* ========== fing() ========== */
+
+
+//pizzas
+const pizzas = [
+   'Mussarela',
+   'Calabreza',
+   'Marguerita',
+   'QuatroQueijos'
+]
+
+const pizza = pizzas.find(p => p.startsWith('Q'))
+
+//console.log(pizza)
+
+//frutas
+const frutas = [
+   {name: 'maçã', quantidade: 3},
+   {name: 'pera', quantidade: 0},
+   {name: 'uva', quantidade: 8}
+]
+
+const fruta = frutas.find(fruta => fruta.name == "uva")
+
+console.log(fruta)
+
+/* ========== find() ========== */
