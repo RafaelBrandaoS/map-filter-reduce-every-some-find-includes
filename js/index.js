@@ -72,13 +72,50 @@ const usuarios = [
    {id: 13, nome: 'Isabelle', idade: 20},
    {id: 17, nome: 'Rafael', idade: 18},
    {id: 22, nome: 'Alisson', idade: 19},
-   {id: 28, nome: 'Giovana', idade: 18},
+   {id: 28, nome: 'Giovanna', idade: 18},
    {id: 37, nome: 'Lara', idade: 19},
    {id: 39, nome: 'Guilherme', idade: 22}
 ]
 
 const maiorDeIdade = usuarios.every(p => p.idade >= 18)
 
-console.log(maiorDeIdade)
+//console.log(maiorDeIdade)
 
 /* ========== every() ========== */
+
+
+
+/* ========== some() ========== */
+
+//verificar se há algum numero primo
+
+function ePrimo( value ) {
+   for (let i = 2; i < value; i++) {
+      if (value % i == 0) {
+         return false
+      }
+   }
+
+   return value > 1
+}
+
+const somaArray = [6, 8, 12, 14, 42]
+
+const numeroPrimo = somaArray.some(ePrimo)
+
+//console.log(numeroPrimo)
+
+//verificar por condições em valores/objetos
+
+const equipe = [
+   {id: 12, nome: 'Marcianos', piloto: true },
+   {id: 22, nome: 'Petroboys', piloto: true },
+   {id: 32, nome: 'Obesmartes', piloto: false },
+   {id: 42, nome: 'Marconaldos', piloto: false }
+]
+
+const temPiloto = equipe.some(pessoa => pessoa.piloto)
+
+console.log(temPiloto)
+
+/* ========== some() ========== */
