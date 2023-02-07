@@ -146,6 +146,25 @@ const frutas = [
 
 const fruta = frutas.find(fruta => fruta.name == "uva")
 
-console.log(fruta)
+//console.log(fruta)
 
 /* ========== find() ========== */
+
+
+
+/* ========== includes() ========== */
+
+const pessoas = [
+   {id: 13, nome: 'marta', idade: 20},
+   {id: 17, nome: 'gabriela', idade: 18},
+   {id: 17, nome: 'rafaela', idade: 20},
+   {id: 22, nome: 'pedro', idade: 19},
+   {id: 13, nome: 'maria', idade: 15},
+   {id: 28, nome: 'josé', idade: 18}
+]
+
+const filtrarPessoas = pessoas.filter( p => p.nome.includes('mari'))
+
+console.log(filtrarPessoas)
+
+/* ========== includes() ========== */
