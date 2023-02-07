@@ -165,6 +165,46 @@ const pessoas = [
 
 const filtrarPessoas = pessoas.filter( p => p.nome.includes('mari'))
 
-console.log(filtrarPessoas)
+//console.log(filtrarPessoas)
 
 /* ========== includes() ========== */
+
+
+
+/* ==========  API real ========== */
+
+async function getPeople() {
+   const response = await fetch( 'https://randomuser.me/api/?results=10' )
+
+   return response.json()
+}
+
+//getPeople().then( data => console.log(data) )
+
+//somente mulheres
+
+getPeople().then(data => {
+   const pessoas = data.results
+
+   //console.log(pessoas.filter(p => p.gender === 'female'))
+})
+
+//trabalhando com dados
+
+getPeople().then(data => {
+   const result = data.results.filter(p => p.dob.age >= 30)
+   const pessoas = []
+
+   for (let p of result) {
+      pessoas.push({
+         'nome': `${p.name.first} ${p.name.last}` ,
+         'idade': p.dob.age,
+         'sexo':  p.gender,
+         'email': p.email
+       })
+   }
+
+   console.table(pessoas)
+})
+
+/* ==========  API real ========== */
